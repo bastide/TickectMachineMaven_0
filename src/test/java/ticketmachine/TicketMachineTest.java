@@ -25,9 +25,12 @@ class TicketMachineTest {
 	@Test
 	// S2 : la balance change quand on insère de l’argent
 	void insertMoneyChangesBalance() {
+		// GIVEN : une machine vierge (initialisée dans @BeforeEach)
+		// WHEN On insère de l'argent
 		machine.insertMoney(10);
 		machine.insertMoney(20);
-		// Les montants ont été correctement additionnés
+		// THEN La balance est mise à jour, les montants sont correctement additionnés
 		assertEquals(10 + 20, machine.getBalance(), "La balance n'est pas correctement mise à jour");
 	}
+
 }
