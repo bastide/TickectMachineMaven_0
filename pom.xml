@@ -23,6 +23,7 @@
                 </configuration>
             </plugin>
             <plugin>
+                <!-- Java Code Coverage, calcule la couverture de code -->
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.14</version>
@@ -48,16 +49,7 @@
             </plugin>
 
             <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.22.2</version>
-            </plugin>
-
-            <plugin>
+                <!-- exec plugin, permet d'exécuter une classe Java -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
@@ -67,6 +59,7 @@
             </plugin>
 
             <plugin>
+                <!-- javadoc plugin, permet de générer la documentation Java -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.1.1</version>
@@ -77,6 +70,7 @@
     </build>    
 
     <dependencies>
+        <!-- Les dépendances nécessaires pour les tests -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
